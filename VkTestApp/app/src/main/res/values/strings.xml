@@ -1,0 +1,7 @@
+<resources>
+
+    <string name="app_name">VkTestApp</string>
+    <integer name="com_vk_sdk_AppId">5373042</integer>
+    <string name="showMsg">Show Message</string>
+
+</resources>
