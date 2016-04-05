@@ -101,8 +101,8 @@ public class MainFragment extends Fragment {
         loginButton.setFragment(this);
         loginButton.registerCallback(mCallbackManager, mCallback);
         Profile profile = Profile.getCurrentProfile();
-        System.out.println("~~~~~~~~~~~~~~~~~~~~~~" + profile.getFirstName());
-        System.out.println("~~~~~~~~~~~~~~~~~~~~~~" + profile.getId());
+        System.out.println("~~~~~~~~" + profile.getFirstName());
+        System.out.println("~~~~~~~~" + profile.getId());
     }
 
     @Override

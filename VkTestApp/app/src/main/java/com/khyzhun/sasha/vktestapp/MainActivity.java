@@ -41,27 +41,28 @@ public class MainActivity extends AppCompatActivity {
         VKSdk.login(this, scope);
 
         listView = (ListView) findViewById(R.id.listView);
-        showMessageButton = (Button) findViewById(R.id.showMessageButton);
+        showMessageButton = (Button)findViewById(R.id.showMessageButton);
         showMessageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final VKRequest request = VKApi.messages().get(VKParameters.from(VKApiConst.COUNT, "10" ));
+                final VKRequest request = VKApi.messages().getDialogs(VKParameters.from(VKApiConst.COUNT, "10" ));
                 request.executeWithListener(new VKRequest.VKRequestListener() {
                     @Override
                     public void onComplete(VKResponse response) {
                         super.onComplete(response);
 
-                        VKApiGetDialogResponse getDialogResponse = (VKApiGetDialogResponse)response.parsedModel;
+                        VKApiGetDialogResponse getMessagesResponse = (VKApiGetDialogResponse)response.parsedModel;
 
-                        final VKList<VKApiDialog> list = getDialogResponse.items;
-
+                        VKList<VKApiDialog> list = getMessagesResponse.items;
                         ArrayList<String> messages = new ArrayList<>();
                         ArrayList<String> users = new ArrayList<>();
 
                         for(VKApiDialog msg : list) {
                             users.add(String.valueOf(msg.message.user_id));
+                            //users.add(String.valueOf(MainActivity.this.list.getById(msg.message.user_id)));
                             messages.add(msg.message.body);
                         }
+
 
                         listView.setAdapter(new CustomAdapter(MainActivity.this, users, messages, list));
                     }

@@ -12,8 +12,8 @@
         android:name=".Application"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity
-            android:name=".MainActivity"
+
+        <activity android:name=".MainActivity"
             android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <data android:scheme="vk5373042"/>
@@ -27,6 +27,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".SendMessage" />
+
+        <activity android:name="com.vk.sdk.VKServiceActivity"
+                  android:label="ServiceActivity"
+                  android:theme="@style/VK.Transparent" />
 
     </application>
 
