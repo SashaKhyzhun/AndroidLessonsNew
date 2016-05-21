@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">MyMiniWordPad</string>
+
+    <string name="button_ok">OK</string>
+    <string name="button_cancel">Cancel</string>
+    <string name="title_open">Open document</string>
+    <string name="title_save">Save document</string>
+    <string name="menu_new">New</string>
+    <string name="menu_open">Open</string>
+    <string name="menu_save">Save</string>
+    <string name="menu_exit">Exit</string>
+    <string name="enter_file_name">Enter file name</string>
+
+</resources>

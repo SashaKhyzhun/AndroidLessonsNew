@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">FragmentDynamicExam</string>
+    <string name="add_button">Добавить</string>
+    <string name="button_remove">Удалить</string>
+    <string name="button_replace">Заменить</string>
+</resources>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="contacts">
+        <item>Sasha</item>
+        <item>Masha</item>
+        <item>Kasha</item>
+        <item>Pasha</item>
+        <item>Nasha</item>
+        <item>Gasha</item>
+        <item>Fasha</item>
+        <item>Dasha</item>
+        <item>Aasha</item>
+        <item>Oasha</item>
+        <item>Iasha</item>
+        <item>Uasha</item>
+        <item>Yasha</item>
+        <item>Tasha</item>
+        <item>Rasha</item>
+        <item>Easha</item>
+        <item>Washa</item>
+        <item>Qasha</item>
+    </string-array>
+
+    <string-array name="images">
+        <item>R.mipmap.ic_launcher</item>
+        <item>R.mipmap.ic_launcher</item>
+        <item>R.mipmap.ic_launcher</item>
+        <item>R.mipmap.ic_launcher</item>
+        <item>R.mipmap.ic_launcher</item>
+        <item>R.mipmap.ic_launcher</item>
+        <item>R.mipmap.ic_launcher</item>
+        <item>R.mipmap.ic_launcher</item>
+        <item>R.mipmap.ic_launcher</item>
+        <item>R.mipmap.ic_launcher</item>
+        <item>R.mipmap.ic_launcher</item>
+        <item>R.mipmap.ic_launcher</item>
+        <item>R.mipmap.ic_launcher</item>
+        <item>R.mipmap.ic_launcher</item>
+        <item>R.mipmap.ic_launcher</item>
+        <item>R.mipmap.ic_launcher</item>
+        <item>R.mipmap.ic_launcher</item>
+        <item>R.mipmap.ic_launcher</item>
+    </string-array>
+
+
+</resources>

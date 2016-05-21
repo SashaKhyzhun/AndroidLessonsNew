@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#000000"
+    android:minHeight="1dp"
+    tools:context="sashakhyzhun.com.fragmentimageexam.MainActivity">
+
+    <fragment
+        android:name="sashakhyzhun.com.fragmentimageexam.ButtonFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/buttons_fragment"
+        tools:layout="@layout/buttons_layout"
+        android:layout_weight="0.50">
+    </fragment>
+
+    <fragment
+        android:name="sashakhyzhun.com.fragmentimageexam.ImageFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/image_fragment"
+        tools:layout="@layout/image_layout"
+        android:layout_weight="0.50">
+    </fragment>
+
+    
+</LinearLayout>
