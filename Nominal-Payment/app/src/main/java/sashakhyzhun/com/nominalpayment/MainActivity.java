@@ -1,41 +1,21 @@
 package sashakhyzhun.com.nominalpayment;
 
-import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.Canvas;
 import android.graphics.Color;
-import android.net.Uri;
 import android.os.Bundle;
-import android.os.Environment;
-import android.provider.MediaStore;
-import android.support.v4.app.DialogFragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-
 public class MainActivity extends ActionBarActivity implements View.OnClickListener {
-
-    private static final int REQUEST_SHARE = 39714;
-    private File png = null;
-    Bitmap myBitmap;
 
     EditText et500, et200, et100, et50, et20, et10, et5, et2, et1;
     TextView resFor500, resFor200, resFor100, resFor50, resFor20, resFor10, resFor5, resFor2, resFor1,
@@ -89,6 +69,12 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                 initAlertDialog();
                 break;
             case R.id.menu_share:
+                Intent i = new Intent(Intent.ACTION_SEND);
+                i.setType("message/rfc822");
+                i.putExtra(Intent.EXTRA_EMAIL  , new String[]{""});
+                i.putExtra(Intent.EXTRA_SUBJECT, "3BIT");
+                i.putExtra(Intent.EXTRA_TEXT   , " ");
+                startActivity(Intent.createChooser(i, "Send mail..."));
 
                 break;
             case R.id.menu_clear:
@@ -97,10 +83,6 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         }
         return super.onOptionsItemSelected(item);
     }
-
-
-
-
 
     //инициализируем все view
     private void initView() {
@@ -238,7 +220,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                 + (gIntParse * gInteger) + (hIntParse * hInteger) + (jIntParse * jInteger));
     }
 
-    //
+    //in future буде заміняти всі пусті поля на "0"
     private void initCheckNullable() {
         if (aIntParse == Integer.parseInt(null)) {
             aIntParse = 0;

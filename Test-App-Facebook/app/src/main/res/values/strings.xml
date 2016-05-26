@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">TestApp</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="facebook_app_id">498823913660603</string>
+
+</resources>
